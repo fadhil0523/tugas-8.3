@@ -6,7 +6,7 @@ import word from "../wordList.json"
 import { useEffect, useState } from "react"
 
 function App() {
-  const [currentWord, setcurrentword] = useState(() => {
+  const [currentWord] = useState(() => {
     return word[Math.floor(Math.random() * word.length)]
   })
 
