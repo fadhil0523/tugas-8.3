@@ -1,0 +1,41 @@
+import StudentGrade from "./componets/StudentsGrade";
+
+function App() {
+  const name: string = "fadhil";
+  const age: number = 19;
+  const isOSIS: boolean = true;
+  const value: number = 20;
+
+  let indentitas: string | number;
+  indentitas = "fadhil";
+
+  console.log(indentitas);
+
+  function cekKelulusan(nilai: number) {
+    if (nilai >= 75) {
+      return;
+      <p>lulus</p>;
+    } else {
+      return <p>tidak lulus</p>;
+    }
+  }
+  function tampilkanData(nama: string, umur: number, akuOsis: boolean) {
+    return (
+      <div>
+        <p>
+          halo nama saya {nama} saya berumur {umur} tahun{" "}
+          {akuOsis ? <p>saya bagian dari OSIS</p> : <p></p>}
+        </p>
+        <p>anda {cekKelulusan(value)}</p>
+      </div>
+    );
+  }
+  return (
+    <>
+      <p>{tampilkanData(name, age, isOSIS)}</p>
+      <StudentGrade/>
+    </>
+  );
+}
+
+export default App;
